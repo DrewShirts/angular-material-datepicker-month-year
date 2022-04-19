@@ -1,0 +1,28 @@
+<h2>luxon-datepicker example:</h2>
+<div>
+  Date "one"
+  <mat-form-field appearance="fill">
+    <mat-label>Month and Year</mat-label>
+    <input matInput [matDatepicker]="dp" [formControl]="date">
+    <mat-hint>MM/YYYY</mat-hint>
+    <mat-datepicker-toggle matSuffix [for]="dp"></mat-datepicker-toggle>
+    <mat-datepicker #dp
+                    startView="multi-year"
+                    (monthSelected)="setMonthAndYear($event, dp, date)">
+    </mat-datepicker>
+  </mat-form-field>
+</div>
+<br/>
+<div>
+  Date "two"
+  <mat-form-field appearance="fill">
+    <mat-label>Month and Year</mat-label>
+    <input matInput [matDatepicker]="dp2" [formControl]="date2">
+    <mat-hint>MM/YYYY</mat-hint>
+    <mat-datepicker-toggle matSuffix [for]="dp2"></mat-datepicker-toggle>
+    <mat-datepicker #dp2
+                    startView="multi-year"
+                    (monthSelected)="setMonthAndYear($event, dp2, date2)">
+    </mat-datepicker>
+  </mat-form-field>
+</div>
